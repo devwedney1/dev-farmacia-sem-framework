@@ -1,0 +1,25 @@
+version: '3.9'
+
+services:
+  farmacia-app:
+    build:
+      context: .
+      dockerfile: .docker/php/dockerfile
+    volumes:
+      - .:/app
+    depends_on:
+      - farmacia-postgres
+
+  farmacia-postgres:
+    container_name: bd-postgres
+    image: postgres
+    restart: always
+    volumes:
+      - .docker/postgres:/var/lib/postgresql
+      - ./app/db:/docker-entrypoint-initdb.d/
+    environment:
+      POSTGRES_DB: ${DB_DATABASE}
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "${DB_PORT}:${DB_PORT}"

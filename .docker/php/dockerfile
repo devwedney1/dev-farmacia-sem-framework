@@ -1,0 +1,10 @@
+# Base iamge
+FROM php:7.4-fpm-alpine
+
+WORKDIR /app
+
+# Expose port
+EXPOSE 9000
+
+# Start
+ENTRYPOINT ["sh", "-c", "php-fpm"]
