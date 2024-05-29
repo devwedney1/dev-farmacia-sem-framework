@@ -6,7 +6,9 @@ services:
       context: .
       dockerfile: .docker/php/dockerfile
     volumes:
-      - .:/app
+      - .:/var/www/html
+    ports: 
+      - "9090:80"
     depends_on:
       - farmacia-postgres
 
