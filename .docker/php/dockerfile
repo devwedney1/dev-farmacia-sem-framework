@@ -1,10 +1,12 @@
-# Base iamge
-FROM php:7.4-fpm-alpine
+FROM php:7.2-apache
 
-WORKDIR /app
+# Define o diretório de trabalho dentro do container
+WORKDIR /var/www/html
+
+COPY app/ /var/www/html/
 
 # Expose port
-EXPOSE 9000
+EXPOSE 80
 
 # Start
-ENTRYPOINT ["sh", "-c", "php-fpm"]
+ENTRYPOINT ["apache2-foreground"]
