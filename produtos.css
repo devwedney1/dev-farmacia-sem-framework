@@ -1,0 +1,78 @@
+body {
+    background-color: rgb(230, 240, 255); /* Fundo azul claro */
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+tr:hover {
+    background-color: #ddd;
+}
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+.sidebar {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.sidebar h1 {
+    padding-left: 5px;
+    margin-right: 20px;
+    padding-bottom: 5px;
+    font-size: 24px; /* Tamanho maior para título */
+    color: #333; /* Cor mais escura */
+    border-bottom: 2px solid #4CAF50; /* Linha decorativa */
+}
+.sidebar .title-container {
+    padding-left: 20px; /* Move o título e a linha decorativa para a direita */
+}
+.sidebar a {
+    display: block;
+    padding: 8px 16px;
+    border-left: 1px solid #ddd;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+}
+.sidebar a:hover {
+    background-color: #f2f2f2;
+}
+.content {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+button.btn-compra {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+button.btn-compra:hover {
+    background-color: #45a049;
+}
+/* Estilos para o título "Produtos" */
+.titulo-produtos {
+    text-align: center;
+    font-size: 26px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
