@@ -4,68 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/produtos.css">
     <title>Produtos</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="dashboard">
         <div class="sidebar">
-        <h1 id="nome">Farmácia</h2>
-        <a href="#">Início</a>
-        <a href="#">Produtos</a>
-        <a href="#">Perfil</a>
-        <a href="#">Configurações</a>
+            <div class="title-container">
+                <h1 id="nome">Farmácia</h1>
+            </div>
+            <a href="#">Início</a>
+            <a href="#">Cadastre seu Remédio</a>
         </div>
 
         <div class="content">
-            <h1>Produtos</h1>
+            <div class="titulo-produtos">PRODUTOS</div> <!-- Título estilizado -->
             <table>
                 <thead>
                     <tr>
                         <th>Produto</th>
                         <th>Preço</th>
+                        <th>Ação</th>
                     </tr>
                 </thead>
-
                 <tbody>
                     <tr>
-                    <td>Azitromicina</td>
-                    <td>R$ 100,00</td>
-                    <td><button class="btn-compra">Comprar</button></td>
+                        <td>Azitromicina</td>
+                        <td>R$ 100,00</td>
+                        <td><button class="btn-compra">Vender</button></td>
                     </tr>
-
                     <tr>
-                    <td>Rivotril</td>
-                    <td>R$ 50,00</td>
-                    <td><button class="btn-compra">Comprar</button></td>
+                        <td>Rivotril</td>
+                        <td>R$ 50,00</td>
+                        <td><button class="btn-compra">Vender</button></td>
+                    </tr>
+                    <tr>
+                        <td>Tadala</td>
+                        <td>R$ 100,00</td>
+                        <td><button class="btn-compra">Vender</button></td>
+                    </tr>
+                    <tr>
+                        <td>Amoxicilina</td>
+                        <td>R$ 50,00</td>
+                        <td><button class="btn-compra">Vender</button></td>
                     </tr>
                 </tbody>
             </table>
-
-            <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Produto</th>
-                        <th>Preço</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                    <td>Tadala</td>
-                    <td>R$ 100,00</td>
-                    <td><button class="btn-compra">Comprar</button></td>
-                    </tr>
-
-                    <tr>
-                    <td>Amoxicilina</td>
-                    <td>R$ 50,00</td>
-                    <td><button class="btn-compra">Comprar</button></td>
-                    </tr>
-                </tbody>
-            </table></div>
-
         </div>
     </div>
 </body>

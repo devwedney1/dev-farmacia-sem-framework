@@ -1,0 +1,95 @@
+body {
+    background-color: #F5FBF8; /* Fundo verde claro */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    background-color: #FFF;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+}
+.navbar h1 {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+    margin-right: 20px;
+    font-weight: normal;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+}
+.navbar a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+    border-left: 1px solid #ddd;
+    padding-left: 10px;
+}
+.navbar a:first-child {
+    border-left: none;
+    padding-left: 0;
+}
+.navbar a:hover {
+    text-decoration: underline;
+}
+.container {
+    padding: 20px;
+}
+.container h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.form-group div {
+    flex: 1;
+    min-width: 200px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.form-group textarea {
+    resize: vertical;
+}
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+.buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.buttons .clear {
+    background-color: #777;
+    color: white;
+}
+.buttons .submit {
+    background-color: #4CAF50;
+    color: white;
+}
+.buttons .clear:hover {
+    background-color: #555;
+}
+.buttons .submit:hover {
+    background-color: #45a049;
+}
