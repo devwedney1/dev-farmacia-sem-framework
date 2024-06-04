@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 class pessoa
 {
@@ -185,4 +185,4 @@ $formaDePagamento = new FormaDePagamento(false, true, false, false);
 echo "Pagamento em Dinheiro: " . ($formaDePagamento->get_dinheiro() ? "Sim" : "Não") . "\n";
 echo "Pagamento com Cartão de Crédito: " . ($formaDePagamento->get_cartaoCredito() ? "Sim" : "Não") . "\n";
 echo "Pagamento com Cartão de Débito: " . ($formaDePagamento->get_cartaoDebito() ? "Sim" : "Não") . "\n";
-echo "Pagamento com Pix: " . ($formaDePagamento->get_pix() ? "Sim" : "Não") . "\n";
+echo "Pagamento com Pix: " . ($formaDePagamento->get_pix() ? "Sim" : "Não") . "\n";*/ -->

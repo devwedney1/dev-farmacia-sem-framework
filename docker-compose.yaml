@@ -1,16 +1,28 @@
-version: '3.9'
-
+version: '3'
 services:
-  farmacia-app:
+  php:
     build:
       context: .
-      dockerfile: .docker/php/dockerfile
+      dockerfile: .Dockerfile-php
     volumes:
-      - .:/var/www/html
-    ports: 
+      - ./seu_codigo_php:/var/www/html
+    networks:
+      - app-network
+
+  apache:
+    build:
+      context: .
+      dockerfile: .Dockerfile-apache
+    ports:
       - "9090:80"
     depends_on:
-      - farmacia-postgres
+      - php
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
 
   farmacia-postgres:
     container_name: bd-postgres
