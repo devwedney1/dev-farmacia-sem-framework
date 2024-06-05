@@ -1,9 +1,7 @@
-CREATE DATABASE IF NOT EXISTS sysFamarcia;
-
-USE sysFamarcia;
+CREATE DATABASE sysFamarcia;
 
 CREATE TABLE IF NOT EXISTS farmacia (
-    id INT AUTO_INCREMENT,
+     id SERIAL,
     nomeDaFarmacia VARCHAR(250),
     endereco VARCHAR(250),
     bairro VARCHAR(100),
@@ -30,13 +28,12 @@ CREATE TABLE IF NOT EXISTS farmaceutico (
 );
 
 CREATE TABLE IF NOT EXISTS cliente (
-    id INT AUTO_INCREMENT,
+    id SERIAL,
     codigoCliente INT,
     nome VARCHAR(100),
     dataNascimento INT,
     cpf INT,
     email VARCHAR(150),
-    endereco VARCHAR(150),
     endereco VARCHAR(150),
     bairro VARCHAR(100),
     numero_residencia INT,
@@ -45,22 +42,29 @@ CREATE TABLE IF NOT EXISTS cliente (
     PRIMARY KEY(id)
 );
 
-CREATE TABLE IF NOT EXISTS remedio (
-    id INT AUTO_INCREMENT,
-    nomeDoRemedio VARCHAR(100),
-    valorDoRemedio MONEY,
-    id_tipoRemedio INT,
-    FOREIGN KEY (id_tipoRemedio) REFERENCES tipoDeRemedio (id);
-    PRIMARY KEY(id)
-);
+CREATE TYPE remedio_tipo AS ENUM ('REMEDIO COM RECEITA', 'REMEDIO SEM RECEITA');
 
 CREATE TABLE IF NOT EXISTS tipoDeRemedio (
-    id INT AUTO_INCREMENT,
-    tipoRemedio ENUM('REMEDIO COM RECEITA, REMEDIO SEM RECEITA') NOT NULL,
+    id SERIAL,
+    tipoRemedio remedio_tipo,
     UNIQUE (tipoRemedio),
     PRIMARY KEY(id)
 );
 
-INSERT INTO tipoDeRemedio (id,tipoRemedio) VALUE (1, 'REMEDIO COM RECEITA');
-INSERT INTO tipoDeRemedio (id,tipoRemedio) VALUE (2, 'REMEDIO SEM RECEITA');
+INSERT INTO tipoDeRemedio (id,tipoRemedio) VALUES (1, 'REMEDIO COM RECEITA');
+INSERT INTO tipoDeRemedio (id,tipoRemedio) VALUES (2, 'REMEDIO SEM RECEITA');
+
+CREATE TABLE IF NOT EXISTS remedio (
+    id SERIAL,
+    nomeDoRemedio VARCHAR(100),
+    nomeLaboratorio VARCHAR(100),
+    valorDoRemedio MONEY,
+    id_tipoRemedio INT,
+    tipoMedicamento VARCHAR(100),
+    descricao VARCHAR(500),
+    FOREIGN KEY (id_tipoRemedio) REFERENCES tipoDeRemedio (id),
+    PRIMARY KEY(id)
+);
+
+
 

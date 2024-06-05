@@ -1,39 +1,40 @@
 <?php
 
+
+
 class RemedyController
 {
 
-    public function requestMetodo()
-    {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $action = $_POST['action'];
+    // public function requestMetodo()
+    // {
+    //     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    //         $action = $_POST['action'];
 
-            switch ($action) {
-                case 'cadastraRemedy':
-                    // Lógica para cadastrar o medicamento
-                    break;
-                case 'listarRemedy':
-                    // Lógica para listar medicamentos
-                    break;
-                // ... outros casos para outros métodos ...
-                default:
-                    // Ação desconhecida
-                    break;
-            }
-        }
-    }
+    //         switch ($action) {
+    //             case 'cadastraRemedy':
+    //                 // Lógica para cadastrar o medicamento
+    //                 break;
+    //             case 'listarRemedy':
+    //                 // Lógica para listar medicamentos
+    //                 break;
+    //             // ... outros casos para outros métodos ...
+    //             default:
+    //                 // Ação desconhecida
+    //                 break;
+    //         }
+    //     }
+    // }
 
     public function cadastraRemedy()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
             $nameMedicamento = $_POST['nameMedicamento'];
-            $namelaboratorio = $_POST['namelaboratorio'];
+            $namelaboratorio = $_POST['nameLaboratorio'];
             $precoUnitario = $_POST['precoUnitario'];
             $tipoReceita = $_POST['tipoReceita'];
             $tipoMedicamento = $_POST['tipoMedicamento'];
             $descricaoRemedio = $_POST['descricaoRemedio'];
-
-            var_dump($nameMedicamento);
 
             echo "Medicamento: $nameMedicamento<br>";
             echo "Laboratório: $namelaboratorio<br>";
@@ -42,9 +43,9 @@ class RemedyController
             echo "Tipo de Medicamento: $tipoMedicamento<br>";
             echo "Descrição: $descricaoRemedio<br>";
 
-
-
         }
+
+     
     }
 
     public function listarRemedy()
