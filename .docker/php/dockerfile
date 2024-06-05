@@ -1,12 +1,21 @@
-FROM php:7.2-apache
+# # Use a imagem oficial do PHP com o Apache
+# FROM php:7.2
 
-# Define o diretório de trabalho dentro do container
-WORKDIR /var/www/html
+# # Define o diretório de trabalho como /var/www/html
+# WORKDIR /var/www/html
 
-COPY app/ /var/www/html/
+# # Copie o código-fonte do seu projeto para o diretório do Apache
+# COPY index.php index.php
+# COPY app/ app
 
-# Expose port
-EXPOSE 80
+# # Defina o DocumentRoot para o diretório do seu projeto
+# ENV APACHE_DOCUMENT_ROOT /var/www/html
 
-# Start
-ENTRYPOINT ["apache2-foreground"]
+# # Atualize as configurações do Apache para usar o novo DocumentRoot
+# RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
+# RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
+
+# EXPOSE  80
+
+# # Start
+# ENTRYPOINT ["apache2-foreground"]
