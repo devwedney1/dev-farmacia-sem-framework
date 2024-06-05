@@ -25,4 +25,5 @@ if (array_key_exists($url, $rotas)) {
     // Rota não encontrada
     echo 'Página não encontrada';
 }
-?>
+
+
