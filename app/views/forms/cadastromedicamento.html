@@ -5,53 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Medicamentos</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/cadastromedicamento.css">
 </head>
 <body>
     <header class="navbar">
         <h1>Farmácia</h1>
-        <a href="#">Início</a>
-        <a href="#">Cadastre seu Remédio</a>
-        <a href="#">Produtos</a>
+        <a href="../home/index.html">Início</a>
+        <a href="./cadastromedicamento.html">Cadastre seu Remédio</a>
+        <a href="./produtos.html">Produtos</a>
     </header>
     <div class="container">
         <h2>Cadastro de novo Medicamento:</h2>
-        <form>
+        <form action="../../controllers/remedy/RemedyController.php" method="POST">
             <div class="form-group">
                 <div>
                     <label for="medicamento">Medicamento</label>
-                    <input type="text" id="medicamento" placeholder="Informe o nome do medicamento">
+                    <input type="text" id="nameMedicamento" name="nameMedicamento" placeholder="Informe o nome do medicamento">
                 </div>
                 <div>
                     <label for="laboratorio">Laboratório</label>
-                    <input type="text" id="laboratorio" placeholder="Informe o laboratório">
+                    <input type="text" id="namelaboratorio" name="namelaboratorio" placeholder="Informe o laboratório">
                 </div>
                 <div>
                     <label for="preco">Preço Unitário</label>
-                    <input type="text" id="preco" placeholder="Informe o preço unitário">
+                    <input type="text" id="precoUnitario" name="precoUnitario" placeholder="Informe o preço unitário">
                 </div>
                 <div>
-                    <label for="tipo-receita">Receita</label>
-                    <select id="tipo-receita">
+                    <label for="tipoReceita">Receita</label>
+                    <select id="tipoReceita" name="tipoReceita">
                         <option value="" disabled selected>Selecione o tipo</option>
-                        <option value="com-receita">Com Receita</option>
-                        <option value="sem-receita">Sem Receita</option>
+                        <option value="comReceita">Com Receita</option>
+                        <option value="semReceita">Sem Receita</option>
                     </select>
                 </div>
                 <div>
-                    <label for="tipo-medicamento">Tipo de medicamento</label>
-                    <select id="tipo-medicamento">
+                    <label for="tipoMedicamento">Tipo de medicamento</label>
+                    <select id="tipoMedicamento" name="tipoMedicamento">
                         <option value="" disabled selected>Selecione o tipo</option>
-                        <option value="generico">Genérico</option>
-                        <option value="similar">Similar</option>
-                        <option value="referencia">Referência</option>
+                        <option value="tipoGenerico">Genérico</option>
+                        <option value="tipoSimilar">Similar</option>
+                        <option value="tipoReferencia">Referência</option>
                     </select>
                 </div>
             </div>
             <div class="form-group">
                 <div style="flex: 2;">
                     <label for="descricao">Descrição</label>
-                    <textarea id="descricao" rows="4" placeholder="Informe a descrição"></textarea>
+                    <textarea id="descricaoRemedio" name="descricaoRemedio" rows="4" placeholder="Informe a descrição"></textarea>
                 </div>
             </div>
             <div class="buttons">
